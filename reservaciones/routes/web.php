@@ -31,10 +31,13 @@ Route::get('clients/create',[ClientController::class, 'create']);
 Route::get('clients/{id}', [ClientController::class, 'show']);
 
 Route::post('clients',[ClientController::class, 'store']);
-
+Route::get('clients/{id}', [ClientController::class, 'store']);
+Route::put('clients',[ClientController::class, 'update']);
 //Rutas para reservaciones
 Route::get('reservations/',[ReservationController::class, 'index']);
-Route::get('reservations/{id}',[ReservationController::class, 'show']);
+Route::get('reservations/edit/{id}',[ReservationController::class, 'edit']);
+
+
 
 /* Rutas de prueba anteriores
 Route::get('/', function () {

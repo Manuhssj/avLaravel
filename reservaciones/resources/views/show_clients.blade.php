@@ -23,6 +23,9 @@
             <th>
                 phone number
             </th>
+            <th>
+                actions
+            </th>
         </thead>
 
         <tbody>
@@ -39,6 +42,9 @@
                     </thead>
                     <thead>
                         {{$client -> phone_number}}
+                    </thead>
+                    <thead>
+                        <a href="{{ url('/clients/edit/'.$client->id) }}">Editar</a>
                     </thead>
                 </tr>
             @endforeach
